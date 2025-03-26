@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Finder - Tìm Việc Làm</title>
+    <link href="/bootstrap-5.3.3-dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .job-card {
+            transition: transform 0.2s;
+            margin-bottom: 20px;
+        }
+        .job-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .search-bar {
+            margin: 20px 0;
+        }
+        .filter-section {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="#">Job Finder</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Trang chủ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Đăng việc làm</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Liên hệ</a>
+                    </li>
+                   <li class="nav-item">
+                    <button type="button" class="btn btn-primary">Đăng ký</button>
+                   </li>
+                   <li class="nav-item">
+                    <a href="http://127.0.0.1:5500/dangky.html"><button type="button" class="btn btn-primary">Đăng nhập</button></a>
+                   </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Search Bar and Filter -->
+        <div class="row search-bar">
+            <div class="col-md-8">
+                <div class="input-group">
+                    <input type="text" id="searchInput" class="form-control" placeholder="Tìm kiếm công việc...">
+                    <button class="btn btn-primary" id="searchBtn">Tìm kiếm</button>
+                </div>
+            </div>
+            <div class="col-md-4 filter-section">
+                <select id="categoryFilter" class="form-select">
+                    <option value="">Tất cả danh mục</option>
+                    <option value="Công nghệ">Công nghệ thông tin</option>
+                    <option value="Kinh doanh">Kinh doanh/Bán hàng</option>
+                    <option value="Giáo dục">Giáo dục</option>
+                    <option value="Y tế">Y tế</option>
+                    <option value="Thiết kế">Thiết kế</option>
+                    <option value="Quan hệ công chúng">Quan hệ công chúng</option>
+                    <option value="Tài chính/Ngân hàng">Tài chính/Ngân hàng</option>
+                    <option value="Kỹ thuật">Kỹ thuật</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Job Listings -->
+        <div id="jobListings" class="row">
+            <!-- Job cards will be dynamically added here -->
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3 mt-5">
+        <p>&copy; 2025 Job Finder. All rights reserved.</p>
+    </footer>
+
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="/bootstrap@5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+    <!-- jQuery -->
+    <script src="/jquery-3.6.0.min.js"></script>
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

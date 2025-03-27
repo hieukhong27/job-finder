@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Finder - Liên Hệ</title>
+    <link href="/bootstrap-5.3.3-dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .contact-section {
+            margin: 40px 0;
+        }
+        .contact-section h2 {
+            margin-bottom: 20px;
+        }
+        .contact-info {
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Job Finder</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Trang chủ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="post-job.html">Đăng việc làm</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Liên hệ</a>
+                    </li>
+                    <li class="nav-item">
+                        <button type="button" class="btn btn-primary" onclick="window.location.href='register.html'">Đăng ký</button>
+                    </li>
+                    <li class="nav-item">
+                        <button type="button" class="btn btn-primary" onclick="window.location.href='login.html'">Đăng nhập</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container contact-section">
+        <h2>Liên Hệ Với Chúng Tôi</h2>
+        <div class="row">
+            <div class="col-md-6 contact-info">
+                <h4>Thông Tin Liên Hệ</h4>
+                <p><strong>Email:</strong> support@jobfinder.vn</p>
+                <p><strong>Điện thoại:</strong> 0123 456 789</p>
+                <p><strong>Địa chỉ:</strong> 123 Đường Công Nghệ, Quận 1, TP. Hồ Chí Minh</p>
+            </div>
+            <div class="col-md-6">
+                <form id="contactForm">
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Họ và tên</label>
+                        <input type="text" class="form-control" id="name" placeholder="Nhập họ và tên" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" placeholder="Nhập email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Tin nhắn</label>
+                        <textarea class="form-control" id="message" rows="5" placeholder="Nhập tin nhắn của bạn..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Gửi tin nhắn</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3 mt-5">
+        <p>© 2025 Job Finder. All rights reserved.</p>
+    </footer>
+
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="/bootstrap@5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+    <!-- jQuery -->
+    <script src="/jquery-3.6.0.min.js"></script>
+    <!-- Custom JavaScript -->
+    <script>
+        $(document).ready(function() {
+            $("#contactForm").submit(function(e) {
+                e.preventDefault();
+                alert("Tin nhắn của bạn đã được gửi! (Chức năng này chỉ là demo)");
+                $(this)[0].reset(); // Reset form sau khi submit
+            });
+        });
+    </script>
+</body>
+</html>
